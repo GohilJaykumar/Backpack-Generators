@@ -1,0 +1,47 @@
+{
+    "name": "jkg/backpack-generators",
+    "description": "Generate files for laravel projects",
+    "keywords": [
+        "generators",
+        "model",
+        "view",
+        "request",
+        "config",
+        "jkg"
+    ],
+    "homepage": "https://github.com/GohilJaykumar/Backpack-Generators",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gohil Jaykumar",
+            "email": "gohiljaykumar1996@gmail.com",
+            "homepage": "https://gohiljaykumar.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "jkg/backpack-crud": "dev-main"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "^9.0||^7.0",
+        "scrutinizer/ocular": "~1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Backpack\\Generators\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --testdox"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Backpack\\Generators\\GeneratorsServiceProvider"
+            ]
+        }
+    }
+}
